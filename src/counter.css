@@ -1,0 +1,11 @@
+img{
+  width: 25%;
+  height: 40%;
+  margin: 3%;
+
+}
+
+.images{
+  display: flex;
+  flex-direction: column;
+}
