@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import './counter.css'
+import Cat from './cat.jpg'
 
 
 function Counter(props){
@@ -9,7 +10,7 @@ function Counter(props){
   return (
     <div>
       <h1>I am watching you!</h1>
-      <img src={props.Image}/>
+      <button onClick={props.addCatClick}><img src={props.Image}/></button>
     </div>
   )
 }
@@ -37,15 +38,13 @@ function mapDispatchToProps(dispatch){
         console.log('clicking')
         const action= { type: 'INCREMENT' };
         dispatch(action)
+      },
+
+      addCatClick: () => {
+        console.log("clicked")
+        const action= { type: 'ADDCAT', value: Cat };
+        dispatch(action)
       }
-
-      // onSubmitClick: () => {
-      //   console.log('clicking')
-      //   console.log()
-      //
-      // }
-
-
 
   }
 }

@@ -18,6 +18,8 @@ const reducer = (state = initialState, action) => {
       return Object.assign([], state, {count: state.count - 1 });
     case 'INCREMENT':
       return Object.assign([], state, { count: state.count + 1 });
+    case 'ADDCAT':
+      return Object.assign([], state, {Image: state.Image + action.value})
     default:
       return state;
   }

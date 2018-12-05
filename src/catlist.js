@@ -11,8 +11,6 @@ class DisplayCat extends Component {
       <h3>Display Cats</h3>
       <div className='images'>
         <img src={this.props.myCat}/>
-        <img src={this.props.myCat}/>
-        <img src={this.props.myCat}/>
       </div>
       </div>
     )
